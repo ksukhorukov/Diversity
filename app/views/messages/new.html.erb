@@ -1,0 +1,8 @@
+<div class="form-submission">
+  <h1>Новое сообщение</h1>
+  <%= render 'form', message: @message %>
+</div>
+<div class="information">
+  <%= render 'index', messages: Message.all %>
+</div>
+<div class="footer"></div>

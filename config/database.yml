@@ -1,0 +1,24 @@
+default: &default
+  adapter: postgresql
+  host: localhost
+  encoding: unicode
+  pool: 5
+  timeout: 5000
+  min_messages: warning
+
+
+development:
+  <<: *default
+  database: diversity_development
+
+staging:
+  <<: *default
+  database: diversity_development
+
+test:
+  <<: *default
+  database: diversity_test
+
+production:
+  <<: *default
+  database: diversity_development

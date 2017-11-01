@@ -1,0 +1,18 @@
+<h1>Сообщения</h1>
+<h2><%= @counter %> 
+  <%= format_greeting(@counter)  %></h2>
+<div class="messages">
+  <table align="center">
+    <tbody>
+      <% messages.each do |message| %>
+        <tr>
+          <td><%= message.created_at %></td>
+          <td><%= message.text %></td>
+          <td><%= link_to 'Удалить', message, method: :delete, data: { confirm: 'Are you sure?' }, remote: true %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+<br>
+
